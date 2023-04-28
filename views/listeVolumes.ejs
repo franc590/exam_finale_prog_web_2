@@ -1,0 +1,11 @@
+<h1>Liste des volumes pour examen</h1>
+
+<div class="listeUsagers">
+    <% usagers.forEach(function(usager) { %>
+             <p>
+                <%= usager.titre %> -
+                <%= usager.nomImage %> 
+            </p>
+         <% }); %>
+    </div>
+    <p><a href="/views/index.ejs">Retour au menu</a></p>

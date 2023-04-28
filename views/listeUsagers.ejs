@@ -1,0 +1,15 @@
+<h1>Liste des usagers pour examen</h1>
+
+<div class="listeUsagers">
+    <% usagers.forEach(function(usager) { %>
+             <p>
+                <%= usager.login %> -
+                <%= usager.nom %> -
+                <%= usager.role.length > 1 ? '(': '' %>
+                    <%= usager.role.indexOf('admin')!==-1?'A':'' %> 
+                    <%= usager.role.indexOf('gestion')!==-1?'G':'' %> 
+                <%= usager.role.length > 1 ? ')': '' %>
+            </p>
+         <% }); %>
+    </div>
+    <p><a href="/views/index.ejs">Retour au menu</a></p>
